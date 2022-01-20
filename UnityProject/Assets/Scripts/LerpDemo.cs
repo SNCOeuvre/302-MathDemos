@@ -16,7 +16,7 @@ public class LerpDemo : MonoBehaviour
         if(pointA == null) return;
         if(pointB == null) return;
 
-        Vector3 pos = Vector3.Lerp(pointA.position, pointB.position, percent);
+        Vector3 pos = AnimMath.Lerp(pointA.position, pointB.position, percent, false);
 
         Quaternion rot = Quaternion.Lerp(pointA.rotation, pointB.rotation, percent);
         //todo: set this object's position to the lerp result
