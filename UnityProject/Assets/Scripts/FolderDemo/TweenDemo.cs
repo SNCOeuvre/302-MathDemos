@@ -53,7 +53,7 @@ public class TweenDemo : MonoBehaviour
 
         p = curve.Evaluate(p); //gasped
 
-        Vector3 pos = AninMath.Lerp(pointA.position, pointB.position, p);
+        Vector3 pos = AnimMath.Lerp(pointA.position, pointB.position, p);
 
         transform.position = pos;
 
@@ -71,7 +71,7 @@ public class EditorTweenDemo : Editor
 
         if (GUILayout.Button("Start Tween"))
         {
-            target.StartTween();
+            ((TweenDemo)target).StartTween();
         }
     }
 

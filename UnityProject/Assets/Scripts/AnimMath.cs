@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class AnimMath : MonoBehaviour
+public static class AnimMath
 {
     public static float Map(float v, float minA, float maxA, float minB, float maxB)
     {
-        float p = (v - minA) / (maxA - minA)
+        float p = (v - minA) / (maxA - minA);
 
         return Lerp(minB, maxB, p);
     }
