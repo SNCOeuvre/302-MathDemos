@@ -27,8 +27,13 @@ public static class AnimMath
     public static Vector3 Lerp(Vector3 a, Vector3 b, float p, bool allowExtrapolation = true)
     {
         //clamping the percentage
-        if (p > 1) p = 1;
-        if (p < 0) p = 0;
+
+        if (!allowExtrapolation)
+        {
+            if (p > 1) p = 1;
+            if (p < 0) p = 0;
+
+        }
 
         return (b-a) * p + a;
     }
